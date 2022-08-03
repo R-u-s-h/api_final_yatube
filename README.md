@@ -8,7 +8,7 @@
 - Подписка на посты автора
 
 ### Технологии
-- Python 3.10
+- Python 3.8.10
 - Django 2.2.16
 - Django REST Framework 3.12.4
 - JWT + Joser

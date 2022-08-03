@@ -51,3 +51,9 @@ class FollowSerializer(serializers.ModelSerializer):
                 message='You are already follower'
             )
         ]
+
+    def validate_following(self, value):
+        if value == self.context['request'].user:
+            raise serializers.ValidationError(
+                'You can\'t follow to yourself')
+        return value
